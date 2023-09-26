@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora Financeira StrawTech</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height:99vh;">
+    
+    <img src="logo.jpeg">
+
+	<div 
+	style="background-color: hsl(0, 100%, 89%) ; width: auto; padding: 10px; 
+	border-radius:50px; border: black solid 2px; text-align: center; max-width: 50%;">
+           
+		   <h4>Informe seu nome: <input style="border-radius: 15px;" type="text" id="Input_NomeDaPessoaResponsável"></h4>
+
+		   <h4>Informe o Nome da fazenda: <input style="border-radius: 15px;" type="text" id="Input_nomeDaFazenda"></h4>
+		      
+		   <h4>Informe a quantidade(Kg) que produz no total :
+		   <input style="border-radius: 15px;" type="number" id="Input_quantidadeTotalProduzida" /></h4>
+	   
+		   	   
+		   <h4>Informe a quantidade(Kg) de perda:
+		   <input style="border-radius: 15px;" type="number" id="input_quantidadeTotalPerdida" /></h4> <h4 style="color: #6b2936;">Se não souber pode deixar em branco que vamos aplicar uma média de 20% que normalmente é perdida por safra.</h4> 
+
+		   <h4>Informe o valor do Kg que você vende o morango:
+		   <input style="border-radius: 15px;" type="number" id="input_valorVendaDoMorango" /> </h4>
+	  
+		   <button onclick="calcularGanhos()" style="border-radius: 15px; border: black solid 2px; background-color: #f97575; padding: 5px; cursor: pointer; font-size: 15px; font-weight: bold;">Calcular lucros com a solução da StrawTech</button>
+		   <br>
+		   <h4><div id="exibir"></div></h4>
+	</div>
+
+</body>
+</html>
+
+<script>
+function calcularGanhos() {
+ 	
+
+	// Pegando valores dos inputs.
+	var NomeDaPessoaResponsável = Input_NomeDaPessoaResponsável.value;
+	var NomeDaFazenda = Input_nomeDaFazenda.value;
+	var QuantidadeTotalProduzida = Number(Input_quantidadeTotalProduzida.value);	/* 100%  -----  valor total
+																						X    -----  Valor da perda */
+	var ValorQuantidadePerda = Number(input_quantidadeTotalPerdida.value);
+	var ValorVendaDosMorangos = Number(input_valorVendaDoMorango.value);
+
+	// validação para se o cliente não souber o valor da perda
+	if(ValorQuantidadePerda == 0){
+
+		var CalcularQuantidadePerda = (QuantidadeTotalProduzida / 100) * 20;
+
+		ValorQuantidadePerda = CalcularQuantidadePerda;
+	}
+
+	//Valores faturados pela empresa atualmente e totalmente(Sem a perda)
+	var ValorFaturadoAtual = (QuantidadeTotalProduzida - ValorQuantidadePerda) * ValorVendaDosMorangos;
+	var ValorFaturadoTotal = QuantidadeTotalProduzida * ValorVendaDosMorangos;
+
+	//Calculando a porcentagem da perda
+	var PorcPerda = (ValorQuantidadePerda * 100) / QuantidadeTotalProduzida;
+
+	//Valor que a empresa está perdendo atualmente e com a nossa solução
+	var ValorPerdido = ValorQuantidadePerda * ValorVendaDosMorangos;
+	var ValorPerdidoFut = ValorPerdido * 0.75;
+
+	//Valores faturados pela empresa futuramente
+	var ValorFaturadoFut = ValorFaturadoTotal - ValorPerdidoFut;
+
+
+
+	
+
+	exibir.innerHTML= `Olá ${NomeDaPessoaResponsável}, a fazenda ${NomeDaFazenda} com base na quantidade produzida (${QuantidadeTotalProduzida}) menos a quantidade perdida (${ValorQuantidadePerda}), 			   você está faturando atualmente um valor total de <b style="color: blue;">R$${ValorFaturadoAtual}</b>, sendo que seu lucro vem apenas de <b style="color: red;">${100 - PorcPerda}%</b> de sua 				   safra. <br><br>
+
+					   Multiplicando o valor do morango pelo total da perda, atualmente você está perdendo um total de <b style="color: red;">R$${ValorPerdido}</b>, sendo ${PorcPerda}% da sua safra.
+					   <br><br>
+
+					   O nosso produto propõe uma media na diminuição na sua perda de 25%, sendo que atualmente você perde <b style="color: red;">R$${ValorPerdido}</b>, com nosso sistema perderia somente <b style="color: green;">R$${ValorPerdidoFut}</b> (Aplicado a diminuição de 25%), sendo agora apenas <b style="color: green;">${PorcPerda * 0.75}%</b>.
+					   <br><br>
+
+					   Sendo assim com o nosso projeto já implantado você faturará um total de <b style="color: green;">R$${ValorFaturadoFut}</b>, sendo um total de <b style="color: green;">${100 - (PorcPerda*0.75)}%</b>
+	`;
+	}
+</script>
