@@ -1,0 +1,45 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header ul{
+    margin-top: 20px;
+    display: inline-flex;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.headerLi{
+    font-size: larger;
+    margin-left: 100px;
+}
+
+.h3Header{
+    border-radius: 10px;
+    border: 1px solid #9E3750;
+    width: 70px;
+    text-align: center;
+    height: 24px;
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.h3Header:hover{
+    background-color: #9E3750;
+}
+

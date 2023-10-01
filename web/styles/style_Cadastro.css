@@ -1,0 +1,62 @@
+.header-main-cadastro{
+ 
+    text-align: center;
+    margin-top: 50px;
+}
+
+main h1{
+    font-size: 60px;
+    color: #9E3750;
+}
+
+.card-cadastro{
+    margin: auto;
+    width: 50vh;
+
+
+
+}
+
+.card_input1{
+    margin-top: 40px;
+    display: inline-flex;
+    margin-bottom: 50px;
+    margin-left: -50px;
+}
+
+.input_decoracao_register{
+    width: 262px;
+    height: 39px;
+    border-radius: 20px;
+    border: 0.5px solid #9E3750;
+    background: #FFF;
+}
+
+.espaçoRegister{
+    margin-left: 70px;
+}
+
+.input_texto_register{
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-bottom: 1px;
+}
+
+.button_cadastrar{
+    margin: auto;
+    padding: 11px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #9E3750;
+    background-color: #FFF;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+
+}
+
+.button_cadastrar:hover{
+    background-color: #9E3750;
+}
