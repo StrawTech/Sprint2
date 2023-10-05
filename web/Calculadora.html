@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="icon" type="image/jpg" href="../img/logo.jpeg"/>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style_Calculadora.css">
+    <script src="./scripts/scriptCalculadora.js"></script>
 </head>
 <body>
     
@@ -24,10 +27,71 @@
     
 
     <main>
+        <div class="header-main-calculadora">
 
-        <center>
-            <h1>Calculadora</h1>
-        </center>
+            <h1 class="h1Calculadora">Calcule</h1>
+            <h3 class="PrimeiroH3Calculadora">Calcule seus <b class="colortextCalculadora">Futuros</b> ganhos com o sistema da <b class="colortextCalculadora">StrawTech</b></h3>
+        
+            <div class="card-calculadora">
+
+        <div class="card_input1">
+
+            <h4>Informe seu nome: 
+            <input class="input_decoracao" id="nomeDaPessoaResponsávelCalc"></h4>
+
+            <div class="espaçoRegister">
+            <h4 class="">Informe o nome da fazenda: 
+            <input class="input_decoracao" type="text" id="input_nomeDaFazendaCalc"></h4>
+            </div>
+        </div>   
+
+
+        <div class="card_input1">
+
+            
+            <h4>Informe a quantidade(Kg) que produz no total :
+            <input class="input_decoracao" type="number" id="input_quantidadeTotalProduzidaCalc" /></h4>
+
+            <div class="espaçoRegister">
+            <h4>Informe a quantidade(Kg) de perda:
+            <input class="input_decoracao" type="number" id="input_quantidadeTotalPerdidaCalc" /></h4>
+            </div>
+        </div>
+
+
+        <div class="card_input1">
+
+            <h4>Informe o valor do Kg que você vende o morango:
+            <input class="input_decoracao" type="number" id="input_valorVendaDoMorangoCalc" /> </h4>
+            <div class="espaçoRegister">
+            <h4 class="textCalculadora">Se não souber a quantidade de perda, pode deixar em branco que vamos aplicar uma média de 20% que normalmente é perdidada por safra.</h4> 
+            </div>
+        </div>
+
+
+            <button class="button_Calcular" onclick="calcularGanhos()" >Calcular lucros com a solução da StrawTech</button>
+            <br>
+            
+            
+        </div>
+        </div>
+
+<h1 style="color: red; text-align: center;"></h1>
+
+
+        <div class="exibirCalculadora" id="exibirCalculadora">
+
+            <div class="headerResultado">
+                <h3>Resultado:</h3>
+                <h2 onclick="closePopup()"><b>X</b></h2>
+            </div>
+
+
+
+            <div id="exibir"></div>
+
+        </div>
+
 
     </main>
 
