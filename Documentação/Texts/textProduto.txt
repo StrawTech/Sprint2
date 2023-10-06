@@ -1,0 +1,4 @@
+	Nós da empresa StrawTech usamos a solução GUTEIM (Gerenciador de umidade e temperatura em estufas industriais de morango),
+ 	que consiste em uma aplicação que monitore a temperatura e a umidade da plantação, que é uma das maiores causas de perdas do produto e qualidade 
+	antes mesmo de saírem das fazendas. O desenvolvimento e implementação da aplicação GUTEIM serão concluídos em um prazo de 12 meses a 
+	partir do início do projeto, fornecendo benefícios imediatos aos agricultores.
