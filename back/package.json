@@ -1,0 +1,16 @@
+{
+  "name": "apiraficos",
+  "version": "1.0.0",
+  "description": "Essa é uma api ultilizada para a captura dos dados.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "SPTECH_2022 by MariseMiranda reproduzido por GustavoFernandesSP",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1",
+    "serialport": "^12.0.0"
+  }
+}

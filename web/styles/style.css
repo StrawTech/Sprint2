@@ -61,7 +61,7 @@ header a{
 .containerSuporte{
     display: none;
     background-color: rgba(224, 157, 157, 0.801);
-    position: absolute;
+    position: fixed;
     right: 25px;
     bottom: 25px;
     padding: 20px;
@@ -94,7 +94,7 @@ header a{
 
 .ImgOpenSuporte{
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 50px;
     bottom: 50px;
     border: 1px solid #9E3750;
