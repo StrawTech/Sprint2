@@ -33,13 +33,18 @@ create table plantacao (
 );
 
 
+
 create table sensor (
+    -- idCapturaDados int primary key auto_increment,
 	idSensor int primary key,
+    -- fkSensor int,
     temp decimal(4,2),
     umi decimal(4,2),
+    -- data date,
     hora timestamp,
     fkPlantacao int,
-    constraint fkPlantSen foreign key (fkPlantacao) references plantacao(idPlantacao)
+    constraint fkPlantSen foreign key (fkPlantacao) references plantacao(idPlantacao)-- ,
+-- constraint fkSensor foreign key (fkSensor) references identificacao_sens (idSensor)
 );
 
 create table suporte (
@@ -48,3 +53,10 @@ create table suporte (
     descricao varchar(300),
     email varchar(45)
 );
+
+-- create table identificacao_sens(
+-- idSensor int primary key auto_increment,
+-- fkEmpresa int,
+-- constraint fkEmpresa foreign key (fkEmpresa) references empresa (idEmpresa)
+-- );
+
