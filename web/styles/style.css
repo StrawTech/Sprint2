@@ -57,3 +57,77 @@ header a{
     margin-left: 15px;
     margin-bottom: 1px;
 }
+
+.containerSuporte{
+    display: none;
+    background-color: rgba(224, 157, 157, 0.801);
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.HeaderSuporte{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tituloSuporte{
+    color: #9E3750;
+}
+
+.CloseSuporte{
+    cursor: pointer;
+    color: red;
+    border: 1px solid  #9E3750;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.CloseSuporte:hover{
+    background-color: red;
+    color: white;
+}
+
+
+.ImgOpenSuporte{
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid #9E3750;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.ImgOpenSuporte:hover{
+    background-color: #9E3750;
+}
+
+.buttonSuporte{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid #9E3750;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.buttonSuporte:hover{
+
+    background-color: #9E3750;
+    color:white;
+    border: 0.5px solid white;
+}
+
+.input_decoracaoSuporte{
+    width: 262px;
+    height: 39px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    border: 0.5px solid #9E3750;
+    background: #FFF;
+}
