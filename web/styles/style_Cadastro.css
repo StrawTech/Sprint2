@@ -32,7 +32,9 @@ main h1{
 .espaçoRegister{
     margin-left: 70px;
 }
-
+body{
+    padding: 30px;
+}
 .input_texto{
     font-family: sans-serif;
     font-size: 15px;
