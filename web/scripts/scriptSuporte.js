@@ -29,11 +29,15 @@ function enviarMsgSuporte(){
     var Input2Suporte = DescricaoDoPloblema.value;
     var Input3Suporte = EmailParaContato.value
 
-    if ( Input1Suporte == "" || Input2Suporte == "" || Input3Suporte == "") {
+    var VerificSeTemAroba = Input3Suporte.indexOf("@") == -1;
+    var VerificarSeTeminputEmBranco = Input1Suporte == "" || Input2Suporte == "" || Input3Suporte == "";
+
+    if ( VerificarSeTeminputEmBranco ) {
         alert("!!! Preencha todos os campos !!!")
-    } else {
+    }else if (VerificSeTemAroba){
+            alert("!!! insira um email válido !!!")
+        } else 
         alert("Mensagem Enviada")
     }
 
     
-}
