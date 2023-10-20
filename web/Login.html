@@ -17,10 +17,10 @@
             <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
             <li class="headerLi"><a href="./Home.html">Home</a></li>
             <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
-            <li class="headerLi"><a href="./Produto.html">produto</a></li>
+            <li class="headerLi"><a href="./Produto.html">Produto</a></li>
         </ul>
 
-            <h3 style="width: 100px;" class="h3Header"><a href="./Cadastro.html">Register</a></h3>
+            <h3 style="width: 100px;" class="h3Header"><a href="./Cadastro.html">Cadastrar</a></h3>
         
     </header>
     
@@ -29,7 +29,7 @@
 
         <div class="h1_main" >
             <h1>Entrar na conta</h1>
-            <p>Não possui uma conta? <a href="./Cadastro.html">Registro</a></p>
+            <p>Não possui uma conta? <a href="./Cadastro.html">Cadastre-se</a></p>
         </div>
 
         <div class="inputs_login" >
@@ -51,8 +51,32 @@
     </main>
 
     <footer>
+        <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte" >
+                <img  src="../img/suporte-tecnico.png" alt="">
+        </div>
 
+
+
+        <div  id="containerSuporte" class="containerSuporte">
+          <div class="HeaderSuporte">
+
+            <h1 class="tituloSuporte">Suporte</h1> <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1></div>
+            
+            <p class="labelSuporte">Qual o problema ?</p> 
+            <input class="input_decoracaoSuporte" type="text" id="input_problema"> 
+           
+            <p class="labelSuporte">Descrição do problema</p> 
+            <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte"
+                type="text"></textarea> 
+            
+            <p class="labeSuportel">E-mail para contato</p>
+             <input id="EmailParaContato" class="input_decoracaoSuporte " type="text"> 
+
+            <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
+
+        </div>
     </footer>
 
 </body>
 </html>
+<script src="./scripts/scriptSuporte.js"></script>

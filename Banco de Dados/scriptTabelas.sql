@@ -34,12 +34,28 @@ create table plantacao (
     constraint fkEmpPlant foreign key (fkEmpresa) references empresa(idEmpresa)
 );
 
+ create table identificacao_sens(
+ idSensor int primary key auto_increment,
+ fkEmpresa int,
+ constraint fkEmpresa foreign key (fkEmpresa) references empresa (idEmpresa)
+ );
 
 create table sensor (
+<<<<<<< HEAD
 	idSensor int primary key,
 	fkPlantacao int,
     constraint fkPlantSen foreign key (fkPlantacao) 
 		references plantacao(idPlantacao)
+=======
+     idCapturaDados int primary key auto_increment,
+     fkSensor int,
+    temp decimal(4,2),
+    umi decimal(4,2),
+    hora timestamp,
+    fkPlantacao int,
+    constraint fkPlantSen foreign key (fkPlantacao) references plantacao(idPlantacao) ,
+    constraint fkSensor foreign key (fkSensor) references identificacao_sens (idSensor)
+>>>>>>> d8ac9fb19f8ba41b9a5ade15d6b9c62fa00d5de7
 );
 
 
