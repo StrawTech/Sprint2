@@ -23,8 +23,8 @@
         <img  src="../img/logo.jpeg" width="135px" alt="Logo StrawTech">
 
         <ul>
-            <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
             <li class="headerLi"><a href="./Home.html">Home</a></li>
+            <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
             <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
             <li class="headerLi"><a href="./Produto.html">Produto</a></li>
         </ul>
@@ -51,7 +51,7 @@
             <section style="width: 100%;">
                 <canvas id="luminosidade"></canvas> -->
             </section>
-            <h1 style="margin-left: 20vh; margin-top: 50px;">Sensor LM 35 - Temperatura</h1>
+            <h1 style="margin-left: 20vh; margin-top: 70px;">Sensor LM 35 - Temperatura</h1>
             <section style="width: 90%; margin: auto;">
                 <canvas id="lm35Temperatura"></canvas>
             </section>
@@ -71,11 +71,13 @@
                 {
                     type: 'line',
                     data: {
+                        labels: ['00:00', '03:00', '06:00', '9:00',
+                            '12:00','15:00','18:00','21:00','00:00',],
                         datasets: [{
                             label: 'Umidade',
                             type: 'line',
                             borderColor: ['#45b3e7'],
-                            backgroundColor: ['#89cff0']
+                            fill:false,  
                         }]
                     },
                     options: {
@@ -195,7 +197,7 @@
                             label: 'Temperatura',
                             type: 'line',
                             borderColor: ['#ffd902'],
-                            backgroundColor: ['#ffe135']
+                            fill:false
                         }]
                     },
                     options: {
