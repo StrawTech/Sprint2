@@ -41,12 +41,10 @@ create table plantacao (
  );
 
 create table sensor (
-<<<<<<< HEAD
 	idSensor int primary key,
 	fkPlantacao int,
     constraint fkPlantSen foreign key (fkPlantacao) 
 		references plantacao(idPlantacao)
-=======
      idCapturaDados int primary key auto_increment,
      fkSensor int,
     temp decimal(4,2),
@@ -55,7 +53,6 @@ create table sensor (
     fkPlantacao int,
     constraint fkPlantSen foreign key (fkPlantacao) references plantacao(idPlantacao) ,
     constraint fkSensor foreign key (fkSensor) references identificacao_sens (idSensor)
->>>>>>> d8ac9fb19f8ba41b9a5ade15d6b9c62fa00d5de7
 );
 
 
@@ -63,15 +60,17 @@ create table registro (
    idRegistro int,
    fkSensor int,
    constraint fkSenReg foreign key (fkSensor)
-		references sensor(idSensor),
+   references sensor(idSensor),
    temp decimal(4,2),
    umi decimal(4,2),
    hora timestamp
 );
 
-/*create table suporte (
+/*
+create table suporte (
 	idSuporte int primary key,
     assunto varchar(45),
     descricao varchar(300),
     email varchar(45)
-);*/
+);
+*/
