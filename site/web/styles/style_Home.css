@@ -1,0 +1,15 @@
+
+.global-main{
+    display: flex;
+
+}
+
+.Text{
+width: 49%;
+margin-left: 75px;
+}
+
+.Imagem{
+    width: 650px;
+    height: 490px;
+}
