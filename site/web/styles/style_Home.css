@@ -13,3 +13,10 @@ margin-left: 75px;
     width: 650px;
     height: 490px;
 }
+.bola1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: fixed;
+}
