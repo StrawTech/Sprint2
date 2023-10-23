@@ -1,7 +1,7 @@
 
 .global-main{
     display: flex;
-
+    
 }
 
 .Text{
@@ -13,10 +13,10 @@ margin-left: 75px;
     width: 650px;
     height: 490px;
 }
-.bola1{
-    width: 100px;
-    height: 100px;
-    background-color: red;
+/* .bola1{
+    width: 500px;
+    height: 600px;
+    background-color: rgba(244, 199, 204, 0.986);
     border-radius: 50%;
     position: fixed;
-}
+} */
