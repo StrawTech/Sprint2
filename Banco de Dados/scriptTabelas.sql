@@ -49,8 +49,8 @@ create table registro (
 	idRegistro int,
 	fkArduino int,
 	foreign key (fkArduino) references arduino(idArduino),
-    temperatura decimal(4,2),
-    umidade decimal(4,2),
+    lm35_temperatura decimal(4,2),
+    dht11_umidade decimal(4,2),
     hora timestamp,
 	primary key(idRegistro, fkArduino )
 );
