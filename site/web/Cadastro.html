@@ -43,12 +43,12 @@
 
                 <div>
                     <p class="input_texto">Nome da Empresa</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_nome_empresa"><br>
                 </div>
 
                 <div class="espaçoRegister">
                     <p class="input_texto">Representante</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_representante"><br>
                     
                 </div>
 
@@ -57,7 +57,7 @@
                 
                 <div>
                     <p class="input_texto">CNPJ</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_cnpj"><br>
                 </div>
     
                 <div class="espaçoRegister">
@@ -83,6 +83,7 @@
 
             <button onclick="cadastrar()" class="button_cadastrar">Cadastrar</button><br>
 
+            <div class="mensagem_validacao" id="div_cnpj"></div>
             <div class="mensagem_validacao" id="div_emailarroba"></div>
             <div class="mensagem_validacao" id="div_senha_invalida"></div>
             <div class="mensagem_validacao" id="div_8caracter"></div>
