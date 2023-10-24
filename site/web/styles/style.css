@@ -136,3 +136,8 @@ header a{
     border: 0.5px solid #9E3750;
     background: #FFF;
 }
+
+.mensagem_validacao{
+/* text-align: center; */
+font-size: 17px;
+}
