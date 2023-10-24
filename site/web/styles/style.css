@@ -137,7 +137,30 @@ header a{
     background: #FFF;
 }
 
+<<<<<<< HEAD
 .mensagem_validacao{
 /* text-align: center; */
 font-size: 17px;
+=======
+#DescricaoDoPloblema {
+    width: 260px;  
+    height: 150px; 
+    
+}
+
+.labelSuporte {
+    margin-left: 15px;
+
+}
+
+.rodape {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+>>>>>>> d6cb12a2cd6d7161e4934ee6a26e90080fadeea9
 }
