@@ -296,14 +296,13 @@
                     grafico.update();
                 })
             }
-
-            setInterval(() => {
+            var abrir = (async () => {
                 obterDados(dht11Umidade, 'dht11/umidade');
                 // obterDados(dht11Temperatura, 'dht11/temperatura');
                 // obterDados(luminosidade, 'luminosidade');
                 obterDados(lm35Temperatura, 'lm35/temperatura');
                 // obterDados(chave, 'chave');
-            }, 500);
+            }, 1000);
 
         </script>
     </main>
