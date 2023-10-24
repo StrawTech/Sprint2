@@ -42,44 +42,54 @@
             <div class="card_input1">
 
                 <div>
-                    <p class="input_texto">Representante</p>
-                    <input type="text" class="input_decoracao"><br>
-                </div>
-
-                <div class="espaçoRegister">
-                    <p class="input_texto">Email</p>
-                    <input type="text" class="input_decoracao"><br>
-                </div>
-
-            </div>
-            <div class="card_input1">
-
-                <div>
                     <p class="input_texto">Nome da Empresa</p>
                     <input type="text" class="input_decoracao"><br>
                 </div>
 
                 <div class="espaçoRegister">
-                    <p class="input_texto">Senha</p>
+                    <p class="input_texto">Representante</p>
                     <input type="text" class="input_decoracao"><br>
+                    
                 </div>
 
             </div>
             <div class="card_input1">
-
+                
                 <div>
                     <p class="input_texto">CNPJ</p>
                     <input type="text" class="input_decoracao"><br>
                 </div>
-
+    
                 <div class="espaçoRegister">
                     <p class="input_texto">Endereço(CEP)</p>
                     <input type="text" class="input_decoracao"><br>
                 </div>
+                
+
+            </div>
+            <div class="card_input1">
+                
+                <div>
+                    <p class="input_texto">E-mail</p>
+                    <input type="email" class="input_decoracao" id="input_email"><br>
+                </div>
+
+                <div class="espaçoRegister">
+                    <p class="input_texto">Senha</p>
+                    <input type="text" class="input_decoracao" id="input_senha"><br>
+                </div>
 
             </div>
 
-            <button class="button_cadastrar">Cadastrar</button>
+            <button onclick="cadastrar()" class="button_cadastrar">Cadastrar</button><br>
+
+            <div class="mensagem_validacao" id="div_emailarroba"></div>
+            <div class="mensagem_validacao" id="div_senha_invalida"></div>
+            <div class="mensagem_validacao" id="div_8caracter"></div>
+            <div class="mensagem_validacao" id="div_especial"></div>
+            <div class="mensagem_validacao" id="div_maiuscula"></div>
+            <div class="mensagem_validacao" id="div_minuscula"></div>
+            <div class="mensagem_validacao" id="div_numero"></div>
 
         </div>
 
@@ -106,11 +116,11 @@
             <p class="labelSuporte">Qual o problema ?</p>
             <input class="input_decoracaoSuporte" type="text" id="input_problema">
 
-            <p class="labelSuporte">Descrição do problema</p>
+            <p class="labelSuporte">Descrição:</p>
             <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
 
-            <p class="labeSuportel">E-mail para contato</p>
-            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="text">
+            <p class="labeSuportel">E-mail para contato:</p>
+            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="email">
 
             <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
 
@@ -121,3 +131,4 @@
 
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
+<script src="Cadastro.js"></script>
