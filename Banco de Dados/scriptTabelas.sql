@@ -12,46 +12,42 @@ create table empresa(
 
 
 create table endereco (
-	idEndereco int,
+	idEndereco int primary key auto_increment,
 	fkEmpresa int,
-    constraint fkEmpEndec foreign key (fkEmpresa) references empresa(idEmpresa),
+    foreign key (fkEmpresa) references empresa(idEmpresa),
     cep char(8),
     uf varchar(30),
     cidade varchar(30),
     bairro varchar(30),
     rua varchar(40),
-    numero int,
-	primary key (idEndereco, fkEmpresa)
+    numero int
 );
  
 
 
 create table plantacao (
-	idPlantacao int,
+	idPlantacao int primary key auto_increment,
 	fkEmpresa int,
     nome varchar(20),
     qtdArduino int,
-    foreign key (fkEmpresa) references empresa(idEmpresa),
-    primary key (idPlantacao, fkEmpresa)
-);
+    foreign key (fkEmpresa) references empresa(idEmpresa)
+    );
 
 create table arduino (
-	idArduino int,
+	idArduino int primary key auto_increment,
 	fkPlantacao int,
 	foreign key (fkPlantacao) references plantacao(idPlantacao),
-	dtInstalacao date,
-    primary key (idArduino, fkPlantacao)
-);
+	dtInstalacao date
+    );
 
 
 create table registro (
-	idRegistro int,
+	idRegistro int primary key auto_increment,
 	fkArduino int,
 	foreign key (fkArduino) references arduino(idArduino),
     lm35_temperatura decimal(4,2),
     dht11_umidade decimal(4,2),
-    hora timestamp,
-	primary key(idRegistro, fkArduino )
+    dataHora timestamp
 );
 
 
