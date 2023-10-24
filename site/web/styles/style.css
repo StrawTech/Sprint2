@@ -159,7 +159,7 @@ header a{
 }
 
 .rodape {
-    background-color: #333;
+    background-color:#a0042b77;
     color: #fff;
     display: flex;
     position: fixed;
@@ -172,7 +172,7 @@ header a{
 }
 
 .rodape2 {
-    background-color: #333;
+    background-color: #a0042b77;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -180,7 +180,7 @@ header a{
     bottom: 0;
     left: 0;
     width: 100%;
-    width: 99vw;
+    width: 100vw;
 }
 
 .labelIcones{

@@ -7,6 +7,7 @@
     <title>Gráficos</title>
     <link rel="icon" type="image/jpg" href="./assets/logoIcon.png" />
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style_Gráficos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
@@ -37,26 +38,33 @@
 
 
     <main>
+        <br><br>
         <center>
             <h1>Grafico</h1>
         </center>
-        <div>
-            <h1 style="margin-left: 20vh;">Sensor DHT 11 - Umidade</h1>
-            <section style="width:90%; margin: auto;">
+        <div class="GraficosJáligadosComAPI">
+
+           
+            <section style="width:45%; margin: auto;">
+                <p class="graficos_umAoLadodoOutro">Sensor DHT 11 - Umidade</p>
                 <canvas id="dht11Umidade"></canvas>
             </section>
+
             <!-- <h1>Sensor DHT 11 - Temperatura</h1>
             <section style="width: 100%;">
-                <canvas id="dht11Temperatura"></canvas> -->
-            </section>
+                <canvas id="dht11Temperatura"></canvas> 
+            </section>-->
              <!-- <h1>Sensor Luminosidade</h1>
             <section style="width: 100%;">
-                <canvas id="luminosidade"></canvas> -->
-            </section>
-            <h1 style="margin-left: 20vh; margin-top: 50px;">Sensor LM 35 - Temperatura</h1>
-            <section style="width: 90%; margin: auto;">
+                <canvas id="luminosidade"></canvas> 
+            </section>-->
+
+            
+            <section style="width: 45%; margin: auto;">
+                <p class="graficos_umAoLadodoOutro" >Sensor LM 35 - Temperatura</p>
                 <canvas id="lm35Temperatura"></canvas>
             </section>
+
              <!-- <h1>Sensor Chave</h1>
             <section style="width: 100%;">
                 <canvas id="chave"></canvas>
@@ -338,7 +346,7 @@
 
         </div>
 
-        <div class="rodape2">
+        <div class="rodape">
             <br><br>
             <div class="labelIcones">
             <img class="icones" src="./assets/whatsapp.png" alt="">
