@@ -7,12 +7,22 @@ function cadastrar() {
     var email = input_email.value;
     var cnpj = input_cnpj.value;
 
-    if (representante == "" ||
-        nome_empresa == "" ||
-        senha == "" ||
-        email == "" ||
-        cnpj == "" ) {
-        alert("Preencha todos os campos")
+    if (representante == "") {
+        div_representante.innerHTML = "* Esse campo é obrigatório"
+    }else{
+        div_representante.innerHTML = ""
+    }
+
+    if (nome_empresa == "") {
+        div_nome_empresa.innerHTML = "* Esse campo é obrigatório"
+    }else{
+        div_nome_empresa.innerHTML = ""
+    }
+
+    if (cnpj == "") {
+        div_cnpj.innerHTML = "* Esse campo é obrigatório"
+    }else{
+        div_cnpj.innerHTML = ""
     }
 
 
@@ -21,14 +31,14 @@ function cadastrar() {
     if (cnpj.length == 14) {
         div_cnpj.innerHTML = ""
     } else {
-        div_cnpj.innerHTML = "Insira um CNPJ válido"
+        div_cnpj.innerHTML = "* Insira um CNPJ válido"
     }
 
     // email possuiir @
     if (email.indexOf("@") == -1) {
-        div_emailarroba.innerHTML = "Seu email é inválido"
+        div_email.innerHTML = "* Insira um e-mail válido"
     } else {
-        div_emailarroba.innerHTML = ''
+        div_email.innerHTML = ''
     }
 
 

@@ -137,11 +137,6 @@ header a{
     background: #FFF;
 }
 
-<<<<<<< HEAD
-.mensagem_validacao{
-/* text-align: center; */
-font-size: 17px;
-=======
 #DescricaoDoPloblema {
     width: 260px;  
     height: 150px; 
@@ -162,5 +157,4 @@ font-size: 17px;
     bottom: 0;
     left: 0;
     width: 100%;
->>>>>>> d6cb12a2cd6d7161e4934ee6a26e90080fadeea9
 }

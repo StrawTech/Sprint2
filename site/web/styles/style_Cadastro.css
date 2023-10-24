@@ -60,3 +60,9 @@ body{
 .button_cadastrar:hover{
     background-color: #9E3750;
 }
+
+.mensagem_validacao{
+    font-size: 15px;
+    color: red;
+    padding-left: 8px;
+}

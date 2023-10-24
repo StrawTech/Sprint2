@@ -17,7 +17,7 @@ const serial = async (
         {
             host: 'localhost',
             port: 3306,
-            user: 'aluno',
+            user: 'root',
             password: 'sptech',
             database: 'metricas'
         }

@@ -17,7 +17,7 @@ const serial = async (
         {
             host: 'localhost',
             port: 3306,
-            user: 'aluno',
+            user: 'root',
             password: 'sptech',
             database: 'metricas'
         }
@@ -42,7 +42,7 @@ const serial = async (
         const dht11Umidade = parseFloat(valores[0]);
         // const dht11Temperatura = parseFloat(valores[1]);
         // const luminosidade = parseFloat(valores[2]);
-        const lm35Temperatura = parseFloat(valores[3]);
+        const lm35Temperatura = parseFloat(valores[1]);
         // const chave = parseInt(valores[4]);
 
         valoresDht11Umidade.push(dht11Umidade);
