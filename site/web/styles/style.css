@@ -136,3 +136,12 @@ header a{
     border: 0.5px solid #9E3750;
     background: #FFF;
 }
+
+#DescricaoDoPloblema {
+    width: 260px;  
+    height: 150px; 
+}
+
+.labelSuporte {
+    margin-left: 15px;
+}
