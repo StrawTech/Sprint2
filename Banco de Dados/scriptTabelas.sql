@@ -1,6 +1,7 @@
 create database strawTech;
 use strawTech;
 
+
 create table empresa(
 	idEmpresa int primary key auto_increment,
     nome varchar(40),
@@ -27,44 +28,35 @@ create table endereco (
 
 
 create table plantacao (
-	idPlantacao int primary key,
+	idPlantacao int,
+	fkEmpresa int,
     nome varchar(20),
-    qtdSensor int,
-    fkEmpresa int,
-    constraint fkEmpPlant foreign key (fkEmpresa) references empresa(idEmpresa)
+    qtdArduino int,
+    foreign key (fkEmpresa) references empresa(idEmpresa),
+    primary key (idPlantacao, fkEmpresa)
 );
 
- create table identificacao_sens(
- idSensor int primary key auto_increment,
- fkEmpresa int,
- constraint fkEmpresa foreign key (fkEmpresa) references empresa (idEmpresa)
- );
-
-create table sensor (
-	idSensor int primary key,
+create table arduino (
+	idArduino int,
 	fkPlantacao int,
-    constraint fkPlantSen foreign key (fkPlantacao) 
-		references plantacao(idPlantacao)
-     idCapturaDados int primary key auto_increment,
-     fkSensor int,
-    temp decimal(4,2),
-    umi decimal(4,2),
-    hora timestamp,
-    fkPlantacao int,
-    constraint fkPlantSen foreign key (fkPlantacao) references plantacao(idPlantacao) ,
-    constraint fkSensor foreign key (fkSensor) references identificacao_sens (idSensor)
+	foreign key (fkPlantacao) references plantacao(idPlantacao),
+	dtInstalacao date,
+    primary key (idArduino, fkPlantacao)
 );
 
 
 create table registro (
-   idRegistro int,
-   fkSensor int,
-   constraint fkSenReg foreign key (fkSensor)
-   references sensor(idSensor),
-   temp decimal(4,2),
-   umi decimal(4,2),
-   hora timestamp
+	idRegistro int,
+	fkArduino int,
+	foreign key (fkArduino) references arduino(idArduino),
+    temperatura decimal(4,2),
+    umidade decimal(4,2),
+    hora timestamp,
+	primary key(idRegistro, fkArduino )
 );
+
+
+
 
 /*
 create table suporte (
