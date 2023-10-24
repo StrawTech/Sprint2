@@ -1,92 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="icon" href="./assets/logoIcon.png" />
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/style_Home.css">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style_Home.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech">
+      <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech" />
 
-        <ul>
-            <li class="headerLi"><a href="./Home.html">Home</a></li>
-            <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
-            <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
-            <li class="headerLi"><a href="./Produto.html">Produto</a></li>
-        </ul>
-        <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
-
+      <ul>
+        <li class="headerLi"><a href="./Home.html">Home</a></li>
+        <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
+        <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
+        <li class="headerLi"><a href="./Produto.html">Produto</a></li>
+      </ul>
+      <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
     </header>
 
     <main>
-        <div class="global-main">
-            <div>
-                <img class="Imagem" src="./assets/imagem da tela home.png" alt="">
-            </div>
+      <div class="global-main">
 
-            <div class="Text">
-
-                <h3>A estratégia da StrawTech consiste em monitorar a temperatura e umidade da plantação de morango.
-                </h3>
-                <p>Com nossa aplicação estimamos um aumento na produtividade constante o ano inteiro de 15% a 27%.</p>
-
-            </div>
-
-        </div>
+      </div>
     </main>
-
-    <!-- <div class="bola1"></div> -->
+<!-- 
+    <div class="bola1"></div> -->
 
     <footer>
-        <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
-            <img src="./assets/suporte-tecnico.png" alt="">
+      <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
+        <img src="./assets/suporte-tecnico.png" alt="" />
+      </div>
+
+      <div id="containerSuporte" class="containerSuporte">
+        <div class="HeaderSuporte">
+          <h1 class="tituloSuporte">Suporte</h1>
+          <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
         </div>
 
+        <p class="labelSuporte">Qual o problema ?</p>
+        <input class="input_decoracaoSuporte" type="text" id="input_problema" />
 
+        <p class="labelSuporte">Descrição:</p>
+        <textarea
+          id="DescricaoDoPloblema"
+          class="input_decoracaoSuporte"
+          type="text"
+        ></textarea>
 
-        <div id="containerSuporte" class="containerSuporte">
-            <div class="HeaderSuporte">
+        <p class="labeSuportel">E-mail para contato:</p>
+        <input
+          id="EmailParaContato"
+          type="email"
+          class="input_decoracaoSuporte"
+          type="email"
+        />
 
-                <h1 class="tituloSuporte">Suporte</h1>
-                <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
-            </div>
+        <button class="buttonSuporte" onclick="enviarMsgSuporte()">
+          Enviar
+        </button>
+      </div>
 
-            <p class="labelSuporte">Qual o problema ?</p>
-            <input class="input_decoracaoSuporte" type="text" id="input_problema">
-
-            <p class="labelSuporte">Descrição:</p>
-            <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
-
-            <p class="labeSuportel">E-mail para contato:</p>
-            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="email">
-
-            <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
-
+      <div class="rodape">
+        <br /><br />
+        <div class="labelIcones">
+          <img class="icones" src="./assets/whatsapp.png" alt="" />
+          <img class="icones" src="./assets/instagram.png" alt="" />
+          <img class="icones" src="./assets/github.png" alt="" />
+          <br /><br />
+          2023 StrawTech. Todos os direitos reservados
         </div>
-
-        <div class="rodape">
-            <br><br>
-            <div class="labelIcones">
-            <img class="icones" src="./assets/whatsapp.png" alt="">
-            <img class="icones" src="./assets/instagram.png" alt="">
-            <img class="icones" src="./assets/github.png" alt=""> 
-            <br><br>
-            2023 StrawTech. Todos os direitos reservados
-            </div>
-            <br>
-        </div>
-        
+        <br />
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
