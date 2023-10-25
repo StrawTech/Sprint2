@@ -43,14 +43,15 @@ create table arduino (
 
 create table registro (
 	idRegistro int primary key auto_increment,
-	fkArduino int,
+	fkArduino int ,
 	foreign key (fkArduino) references arduino(idArduino),
-    lm35_temperatura decimal(4,2),
-    dht11_umidade decimal(4,2),
+    lm35_temperatura float(5),
+    dht11_umidade float(5),
     dataHora timestamp
 );
 
-
+	select * from registro;
+    truncate registro;
 
 
 /*
