@@ -37,17 +37,18 @@
         <div class="inputs_login">
 
             <p class="input_texto">Email</p>
-            <input class="input_decoracao" type="text">
-
+            <input id="input_TelaLogin_Email" class="input_decoracao" type="text">
+            <p style="color: red;" id="msgInputEmail"></p>
             <!-- <p class="input_texto">CNPJ</p>
             <input class="input_decoracao" type="text"> -->
 
             <p class="input_texto">Senha</p>
-            <input class="input_decoracao" type="text">
+            <input id="input_TelaLogin_Senha" class="input_decoracao" type="text">
+            <p style="color: red;" id="msgInputSenha"></p>
 
         </div>
 
-        <button class="button_Login">Login</button>
+        <button onclick="Fazerlogin()" class="button_Login">Login</button>
 
 
     </main>
@@ -78,15 +79,15 @@
             <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
 
         </div>
-<br><br><br><br>
+        <br><br><br><br>
         <div class="rodape">
             <br><br>
             <div class="labelIcones">
-            <img class="icones" src="./assets/whatsapp.png" alt="">
-            <img class="icones" src="./assets/instagram.png" alt="">
-            <img class="icones" src="./assets/github.png" alt=""> 
-            <br><br>
-            2023 StrawTech. Todos os direitos reservados
+                <img class="icones" src="./assets/whatsapp.png" alt="">
+                <img class="icones" src="./assets/instagram.png" alt="">
+                <img class="icones" src="./assets/github.png" alt="">
+                <br><br>
+                2023 StrawTech. Todos os direitos reservados
             </div>
             <br>
         </div>
@@ -97,3 +98,4 @@
 
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
+<script src="./scripts/scripitLogin.js"></script>

@@ -40,11 +40,36 @@
     <main>
         <br><br>
         <center>
-            <h1>Grafico</h1>
+            <h1>Gráficos</h1>
         </center>
+
+        <br><br>
+
+        <div class="DivDashBoardCard-2">
+            <br>
+            <h3>Média Diária</h3>
+
+            <div class="FlexBox alintExCenter">
+
+                <div class="Card-MédiaMensalUmi">
+                    <p style="color: #45b3e7; font-size: 20px;">Umidade</p>
+                    <p class="NumberCardMensalUmi">42,4</p>
+                </div>
+
+                <div class="Card-MédiaMensalTemp">
+                    <p style="color: #FF7301; font-size: 20px;">Temperatura</p>
+                    <p class="NumberCardMensalTemp">25,2</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <br><br>
         <div class="GraficosJáligadosComAPI">
 
-           
+
             <section style="width:45%; margin: auto;">
                 <p class="graficos_umAoLadodoOutro">Sensor DHT 11 - Umidade</p>
                 <canvas id="dht11Umidade"></canvas>
@@ -54,22 +79,62 @@
             <section style="width: 100%;">
                 <canvas id="dht11Temperatura"></canvas> 
             </section>-->
-             <!-- <h1>Sensor Luminosidade</h1>
+            <!-- <h1>Sensor Luminosidade</h1>
             <section style="width: 100%;">
                 <canvas id="luminosidade"></canvas> 
             </section>-->
 
-            
+
             <section style="width: 45%; margin: auto;">
-                <p class="graficos_umAoLadodoOutro" >Sensor LM 35 - Temperatura</p>
+                <p class="graficos_umAoLadodoOutro">Sensor LM 35 - Temperatura</p>
                 <canvas id="lm35Temperatura"></canvas>
             </section>
 
-             <!-- <h1>Sensor Chave</h1>
+            <!-- <h1>Sensor Chave</h1>
             <section style="width: 100%;">
                 <canvas id="chave"></canvas>
             </section>  -->
         </div>
+        <br>
+        <div class="GraficosJáligadosComAPI">
+
+
+            <section style="width:45%; margin: auto;">
+                <p class="graficos_umAoLadodoOutro">Média da umidade mensal</p>
+                <canvas id="MédiaUmiMensal"></canvas>
+            </section>
+
+            <section style="width:45%; margin: auto;">
+                <p class="graficos_umAoLadodoOutro">Média da temperatura mensal</p>
+                <canvas id="MédiaTempMensal"></canvas>
+            </section>
+
+        </div>
+
+        <br>
+
+        <div class="DivDashBoardCard">
+            <br>
+            <h3>Média Mensal</h3>
+
+            <div class="FlexBox alintExCenter">
+
+                <div class="Card-MédiaMensalUmi">
+                    <p style="color: #45b3e7; font-size: 20px;">Umidade</p>
+                    <p class="NumberCardMensalUmi">46,9</p>
+                </div>
+
+                <div class="Card-MédiaMensalTemp">
+                    <p style="color: #FF7301; font-size: 20px;">Temperatura</p>
+                    <p class="NumberCardMensalTemp">21,09</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <br><br><br>
 
         <script>
             /* -- dht11Umidade -- */
@@ -81,14 +146,14 @@
                 {
                     type: 'line',
                     data: {
-                        labels:[
-                            '00:00','03:00','06:00','09:00','12:00','15:00','18:00','21:00','00:00'
+                        labels: [
+                            '00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '00:00'
                         ],
                         datasets: [{
                             label: 'Umidade',
                             type: 'line',
                             borderColor: ['#45b3e7'],
-                            fill:false,
+                            fill: false,
                         }]
                     },
                     options: {
@@ -115,6 +180,141 @@
                     }
                 }
             );
+
+            /* -- lm35Temperatura */
+            var contextoLm35Temperatura = document.getElementById('lm35Temperatura').getContext('2d');
+            contextoLm35Temperatura.canvas.width = 500;
+            contextoLm35Temperatura.canvas.height = 150;
+            var lm35Temperatura = new Chart(
+                contextoLm35Temperatura,
+                {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            '00:00', '03:00', '06:00', '09:00', '12:00', '15:00', '18:00', '21:00', '00:00'
+                        ],
+                        datasets: [{
+                            label: 'Temperatura',
+                            type: 'line',
+                            borderColor: ['#FF7301'],
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                distribution: 'series',
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }],
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Temperatura'
+                                },
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 0
+                        }
+                    }
+                }
+            );
+
+            /* -- Média Temperatura Mensal -- */
+            var contextoMédiaTempMensal = document.getElementById('MédiaTempMensal').getContext('2d');
+            contextoMédiaTempMensal.canvas.width = 500;
+            contextoMédiaTempMensal.canvas.height = 150;
+            var dht11Umidade = new Chart(
+                contextoMédiaTempMensal,
+                {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            '5', '10', '15', '20', '25', '30'
+                        ],
+                        datasets: [{
+                            label: 'Temperatura',
+                            type: 'line',
+                            borderColor: ['#FF7301'],
+                            fill: false,
+                            data: [20.1, 21.8, 23.0, 24.9, 22.0, 22.0, 23.7, 24.24, 28.8, 27.0, 21.0, 22.0, 23.0, 22.0, 21.78, 22.7, 21.4, 22.2, 22.6, 23.2, 27.9, 21.7, 22.0, 23.0, 22.4, 21.0, 23.1, 22.2, 21.6]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                distribution: 'series',
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }],
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Temperatura'
+                                },
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 0
+                        }
+                    }
+                }
+            );
+
+            /* -- Média Mensal Umidade -- */
+            var contextoMédiaUmiMensal = document.getElementById('MédiaUmiMensal').getContext('2d');
+            contextoMédiaUmiMensal.canvas.width = 500;
+            contextoMédiaUmiMensal.canvas.height = 150;
+            var contextoMédiaUmiMensal = new Chart(
+                contextoMédiaUmiMensal,
+                {
+                    type: 'line',
+                    data: {
+                        labels: [
+                            '5', '10', '15', '20', '25', '30'
+                        ],
+                        datasets: [{
+                            label: 'Umidade',
+                            type: 'line',
+                            borderColor: ['#45b3e7'],
+                            fill: false,
+                            data: [50, 51, 53, 54, 55, 52, 53, 54, 58, 57, 51, 52, 53, 52, 51, 52, 51, 52, 52, 53, 57, 51, 52, 53, 52, 51, 53, 52, 51]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                distribution: 'series',
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }],
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Umidade'
+                                },
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        animation: {
+                            duration: 0
+                        }
+                    }
+                }
+            );
+
             /* -- dht11Temperatura 
             var contextoDht11Temperatura = document.getElementById('dht11Temperatura').getContext('2d');
             contextoDht11Temperatura.canvas.width = 1000;
@@ -195,49 +395,7 @@
                     }
                 }
             ) -- */
-            /* -- lm35Temperatura */
-            var contextoLm35Temperatura = document.getElementById('lm35Temperatura').getContext('2d');
-            contextoLm35Temperatura.canvas.width = 500;
-            contextoLm35Temperatura.canvas.height = 150;
-            var lm35Temperatura = new Chart(
-                contextoLm35Temperatura,
-                {
-                    type: 'line',
-                    data: {
-                        labels:[
-                            '00:00','03:00','06:00','09:00','12:00','15:00','18:00','21:00','00:00'
-                        ],
-                        datasets: [{
-                            label: 'Temperatura',
-                            type: 'line',
-                            borderColor: ['#ffd902'],
-                            fill:false
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            xAxes: [{
-                                distribution: 'series',
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }],
-                            yAxes: [{
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'Temperatura'
-                                },
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        },
-                        animation: {
-                            duration: 0
-                        }
-                    }
-                }
-            );
+
             /* -- chave 
             var contextoChave = document.getElementById('chave').getContext('2d');
             contextoChave.canvas.width = 1000;
@@ -311,8 +469,8 @@
 
             setInterval(() => {
                 obterDados(dht11Umidade, 'dht11/umidade');
-               // obterDados(dht11Temperatura, 'dht11/temperatura');
-               // obterDados(luminosidade, 'luminosidade');
+                // obterDados(dht11Temperatura, 'dht11/temperatura');
+                // obterDados(luminosidade, 'luminosidade');
                 obterDados(lm35Temperatura, 'lm35/temperatura');
                 // obterDados(chave, 'chave');
             }, 1000);
@@ -346,14 +504,14 @@
 
         </div>
 
-        <div class="rodape">
+        <div class="rodape2">
             <br><br>
             <div class="labelIcones">
-            <img class="icones" src="./assets/whatsapp.png" alt="">
-            <img class="icones" src="./assets/instagram.png" alt="">
-            <img class="icones" src="./assets/github.png" alt=""> 
-            <br><br>
-            2023 StrawTech. Todos os direitos reservados
+                <img class="icones" src="./assets/whatsapp.png" alt="">
+                <img class="icones" src="./assets/instagram.png" alt="">
+                <img class="icones" src="./assets/github.png" alt="">
+                <br><br>
+                2023 StrawTech. Todos os direitos reservados
             </div>
             <br>
         </div>

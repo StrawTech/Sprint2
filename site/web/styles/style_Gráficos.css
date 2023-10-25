@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .GraficosJáligadosComAPI{
@@ -11,4 +12,52 @@
 
 .graficos_umAoLadodoOutro{
     font-size: 20px;
+}
+
+.DivDashBoardCard{
+    width: 40%;
+    border: 1px solid Gray;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.DivDashBoardCard-2{
+    width: 99%;
+    border: 1px solid Gray;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.FlexBox{
+    display: flex;
+}
+
+.Card-MédiaMensalUmi{
+    margin: auto;
+}
+
+.Card-MédiaMensalTemp{
+    margin: auto;
+}
+
+.NumberCardMensalUmi{
+    font-size: 20px;
+    background-color: #45b3e7;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.NumberCardMensalTemp{
+    font-size: 20px;
+    background-color: #FF7301;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
 }
