@@ -5,6 +5,7 @@
 }
 
 .img1 {
+    margin-top: 25px;
     margin-left: 40px;
     width: 550px;
 }
@@ -13,7 +14,7 @@
     margin-right: 40px;
     width: 550px;
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 130px;
 }
 
 .txt1 {
@@ -33,14 +34,15 @@
 
 .txt3_titulo {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 25px;
+    
 }
 
 .txt3 {
     text-align: center;
-    /* margin-top: 40px; ; */
     margin-left: 40px;
     font-size: larger;
+    margin-bottom: 90px;
 }
 
 .info_produto {
@@ -66,9 +68,27 @@
 .container {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 40px;
+
 }
 
 .container_d {
     margin-bottom: 60px;
     font-size: larger;
+}
+.h2-titulos{
+    text-align: center;
+}
+.h2-vantagens{
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+    margin-bottom: 10px;
+}
+
+
+
+span a {
+    text-decoration: none;    
+    color: red;
 }
