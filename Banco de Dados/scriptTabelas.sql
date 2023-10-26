@@ -55,17 +55,3 @@ create table registro (
 insert into registro (lm35_temperatura, dht11_umidade) values
 (20.10, 20.10);
 
-
-drop table registro;
-	select * from registro;
-    truncate registro;
-
-
-/*
-create table suporte (
-	idSuporte int primary key,
-    assunto varchar(45),
-    descricao varchar(300),
-    email varchar(45)
-);
-*/
