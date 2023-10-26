@@ -1,3 +1,5 @@
+drop database strawTech;
+
 create database strawTech;
 use strawTech;
 
@@ -43,22 +45,13 @@ create table arduino (
 
 create table registro (
 	idRegistro int primary key auto_increment,
-	fkArduino int ,
+	fkArduino int,
 	foreign key (fkArduino) references arduino(idArduino),
-    lm35_temperatura float(5),
-    dht11_umidade float(5),
-    dataHora timestamp
+    lm35_temperatura decimal(4,2),
+    dht11_umidade decimal(4,2),
+    dataHora timestamp default current_timestamp
 );
 
-	select * from registro;
-    truncate registro;
+insert into registro (lm35_temperatura, dht11_umidade) values
+(20.10, 20.10);
 
-
-/*
-create table suporte (
-	idSuporte int primary key,
-    assunto varchar(45),
-    descricao varchar(300),
-    email varchar(45)
-);
-*/
