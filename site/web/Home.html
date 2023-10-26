@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="icon" href="./assets/logoIcon.png" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/style_Home.css" />
-  </head>
 
-  <body>
-    <header>
-      <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" href="./assets/logoIcon.png" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/style_Home.css" />
+</head>
 
-      <ul>
-        <li class="headerLi"><a href="./Home.html">Home</a></li>
-        <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
-        <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
-        <li class="headerLi"><a href="./Produto.html">Produto</a></li>
-      </ul>
-      <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
-    </header>
+<body>
+  <header>
+    <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech" />
 
-    <main>
-      <div class="global-main">
+    <ul>
+      <li class="headerLi"><a href="./Home.html">Home</a></li>
+      <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
+      <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
+      <li class="headerLi"><a href="./Produto.html">Produto</a></li>
+    </ul>
+    <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
+  </header>
 
+  <main>
+    <div class="global-main">
+      <div class="ImgMain">
+        <img style="border-radius: 25px;" src="./assets/estufaMorangoimg.jpg" alt="">
       </div>
-    </main>
-<!-- 
-    <div class="bola1"></div> -->
-
-    <footer>
-      <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
-        <img src="./assets/suporte-tecnico.png" alt="" />
+      <div class="TextHome">
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit molestiae minus rem recusandae aperiam
+          numquam impedit deserunt iste quibusdam, repellat neque sint! Nam natus sit rerum eum assumenda? Reiciendis,
+          repudiandae?<br><br>
+          * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit molestiae minus rem recusandae aperiam
+          numquam imp<br><br>
+          * Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit molestiae minus rem recusandae aperiam
+          numquam imp
+        </h3>
       </div>
+    </div>
+  </main>
 
-      <div id="containerSuporte" class="containerSuporte">
-        <div class="HeaderSuporte">
-          <h1 class="tituloSuporte">Suporte</h1>
-          <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
-        </div>
+  <footer>
+    <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
+      <img src="./assets/suporte-tecnico.png" alt="" />
+    </div>
 
-        <p class="labelSuporte">Qual o problema ?</p>
-        <input class="input_decoracaoSuporte" type="text" id="input_problema" />
-
-        <p class="labelSuporte">Descrição:</p>
-        <textarea
-          id="DescricaoDoPloblema"
-          class="input_decoracaoSuporte"
-          type="text"
-        ></textarea>
-
-        <p class="labeSuportel">E-mail para contato:</p>
-        <input
-          id="EmailParaContato"
-          type="email"
-          class="input_decoracaoSuporte"
-          type="email"
-        />
-
-        <button class="buttonSuporte" onclick="enviarMsgSuporte()">
-          Enviar
-        </button>
+    <div id="containerSuporte" class="containerSuporte">
+      <div class="HeaderSuporte">
+        <h1 class="tituloSuporte">Suporte</h1>
+        <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
       </div>
 
-      <div class="rodape">
-        <br /><br />
-        <div class="labelIcones">
-          <br>
-          <a href="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png" alt=""></a>
-          <a href="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png" alt=""></a>
-          <a href="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png" alt=""></a>
-          <br />
-          <h5>2023 StrawTech. Todos os direitos reservados</h5>
-        </div>
+      <p class="labelSuporte">Qual o problema ?</p>
+      <input class="input_decoracaoSuporte" type="text" id="input_problema" />
+
+      <p class="labelSuporte">Descrição:</p>
+      <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
+
+      <p class="labeSuportel">E-mail para contato:</p>
+      <input id="EmailParaContato" type="email" class="input_decoracaoSuporte" type="email" />
+
+      <button class="buttonSuporte" onclick="enviarMsgSuporte()">
+        Enviar
+      </button>
+    </div>
+
+    <div class="rodape">
+      <br /><br />
+      <div class="labelIcones">
+        <br>
+        <a href="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png" alt=""></a>
+        <a href="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png" alt=""></a>
+        <a href="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png" alt=""></a>
         <br />
+        <h5>2023 StrawTech. Todos os direitos reservados</h5>
       </div>
-    </footer>
-  </body>
+      <br />
+    </div>
+  </footer>
+</body>
+
 </html>
 <script src="./scripts/scriptSuporte.js"></script>

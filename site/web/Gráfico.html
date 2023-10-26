@@ -54,12 +54,12 @@
 
                 <div class="Card-MédiaMensalUmi">
                     <p style="color: #45b3e7; font-size: 20px;">Umidade %</p>
-                    <p class="NumberCardMensalUmi">42,4</p>
+                    <p id="NumeroCardDiáriaUmi" class="NumberCardMensalUmi">42,4</p>
                 </div>
 
                 <div class="Card-MédiaMensalTemp">
                     <p style="color: #FF7301; font-size: 20px;">Temperatura C°</p>
-                    <p class="NumberCardMensalTemp">25,2</p>
+                    <p id="NumeroCardDiáriaTemp" class="NumberCardMensalTemp">25,2</p>
                 </div>
 
             </div>
@@ -148,7 +148,7 @@
                     type: 'line',
                     data: {
                         labels: [
-                            '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00','11:00', '12:00','13:00','14:00', '15:00','16:00','17:00', '18:00','19:00','20:00', '21:00','22:00', '23:00',
+                            '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',
                         ],
                         datasets: [{
                             label: 'Umidade',
@@ -192,7 +192,7 @@
                     type: 'line',
                     data: {
                         labels: [
-                        '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00','11:00', '12:00','13:00','14:00', '15:00','16:00','17:00', '18:00','19:00','20:00', '21:00','22:00', '23:00',
+                            '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',
                         ],
                         datasets: [{
                             label: 'Temperatura',
@@ -474,7 +474,7 @@
                 // obterDados(luminosidade, 'luminosidade');
                 obterDados(lm35Temperatura, 'lm35/temperatura');
                 // obterDados(chave, 'chave');
-            }, 1000);   
+            }, 1000);
 
         </script>
     </main>
@@ -509,9 +509,12 @@
             <br><br>
             <div class="labelIcones">
                 <br>
-                <a href="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png" alt=""></a>
-                <a href="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png" alt=""></a>
-                <a href="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png" alt=""></a>
+                <a href="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png"
+                        alt=""></a>
+                <a href="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png"
+                        alt=""></a>
                 <br>
                 <h5>2023 StrawTech. Todos os direitos reservados</h5>
             </div>
@@ -523,3 +526,4 @@
 
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
+<script src="./scripts/scriptGráfico.js"></script>
