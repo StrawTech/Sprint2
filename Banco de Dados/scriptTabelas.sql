@@ -28,13 +28,18 @@ create table endereco (
     uf varchar(30) not null,
     cidade varchar(30) not null,
     bairro varchar(30),
-    rua varchar(40) not null,
+    rua varchar(50) not null,
     numero int,
     primary key(idEndereco, fkEmpresa)
 );
 
 insert into endereco values
-()
+	(1,1, '21304932', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Hadock Lobo', 595),
+	(2,1, '89320492', 'RJ', 'Rio de Janeiro', 'Madureira','Avenida Brasil', 1000),
+	(1,2, '64154647', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Alameda Santos', 3445),
+	(1,3, '54646819', 'SC', 'Santa Catarina', 'Joinville', 'Pitangas', 34);
+
+
 
 
 create table plantacao (
