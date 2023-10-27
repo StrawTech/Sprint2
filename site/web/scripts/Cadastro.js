@@ -1,37 +1,110 @@
 
 function cadastrar() {
 
-    var representante = input_representante.value;
     var nome_empresa = input_nome_empresa.value;
+    var representante = input_representante.value;
+    var cnpj = input_cnpj.value;
+    var endereco = input_endereco.value;
+    var cidade = input_cidade.value;
+    var bairro = input_bairro.value;
+    var rua = input_rua.value;
+    var numero_rua = input_numero_rua.value;
     var senha = input_senha.value;
     var email = input_email.value;
-    var cnpj = input_cnpj.value;
+
+
+    //validação dos campos nao poderem ser nulos
+    if (rua == "") {
+        div_rua.innerHTML = "* Esse campo é obrigatório"
+    } else {
+        div_rua.innerHTML = ""
+    }
+
+    if (bairro == "") {
+        div_bairro.innerHTML = "* Esse campo é obrigatório"
+    } else {
+        div_bairro.innerHTML = ""
+    }
+
+    if (cidade == "") {
+        div_cidade.innerHTML = "* Esse campo é obrigatório"
+    } else {
+        div_cidade.innerHTML = ""
+    }
 
     if (representante == "") {
         div_representante.innerHTML = "* Esse campo é obrigatório"
-    }else{
+    } else {
         div_representante.innerHTML = ""
     }
 
     if (nome_empresa == "") {
         div_nome_empresa.innerHTML = "* Esse campo é obrigatório"
-    }else{
+    } else {
         div_nome_empresa.innerHTML = ""
     }
 
     if (cnpj == "") {
-        div_cnpj.innerHTML = "* Esse campo é obrigatório"
-    }else{
-        div_cnpj.innerHTML = ""
+        div_cnpj.innerHTML = "* Insira valores válidos para este campo"
+    } else {// validação se o campo numero foi realmente preenchido por numeros
+        //cpf com 14 numeros obrigatórios
+        if (cnpj.length == 14 &&
+            (cnpj.indexOf("0") > -1 ||
+                cnpj.indexOf("1") > -1 ||
+                cnpj.indexOf("2") > -1 ||
+                cnpj.indexOf("3") > -1 ||
+                cnpj.indexOf("4") > -1 ||
+                cnpj.indexOf("5") > -1 ||
+                cnpj.indexOf("6") > -1 ||
+                cnpj.indexOf("7") > -1 ||
+                cnpj.indexOf("8") > -1 ||
+                cnpj.indexOf("9") > -1
+            )) {
+            div_cnpj.innerHTML = ""
+        } else {
+            div_cnpj.innerHTML = "* Insira um CNPJ válido"
+        }
     }
 
+    if (endereco == "") {
+        div_endereco.innerHTML = "* Esse campo é obrigatório"
+    } else {// validação se o campo numero foi realmente preenchido por numeros
+        //cep com 8 numeros obrigatórios
+        if (endereco.length == 8 &&
+            (endereco.indexOf("0") > -1 ||
+                endereco.indexOf("1") > -1 ||
+                endereco.indexOf("2") > -1 ||
+                endereco.indexOf("3") > -1 ||
+                endereco.indexOf("4") > -1 ||
+                endereco.indexOf("5") > -1 ||
+                endereco.indexOf("6") > -1 ||
+                endereco.indexOf("7") > -1 ||
+                endereco.indexOf("8") > -1 ||
+                endereco.indexOf("9") > -1
+            )) {
+            div_endereco.innerHTML = ""
+        } else {
+            div_endereco.innerHTML = "* Insira um CEP válido"
+        }
+    }
 
-
-    // cnpj com 14 digitos
-    if (cnpj.length == 14) {
-        div_cnpj.innerHTML = ""
-    } else {
-        div_cnpj.innerHTML = "* Insira um CNPJ válido"
+    if (numero_rua == "") {
+        div_numero_rua.innerHTML = "* Esse campo é obrigatório"
+    } else { // validação se o campo numero foi realmente preenchido por numeros
+        if (numero_rua.indexOf("0") > -1 ||
+            numero_rua.indexOf("1") > -1 ||
+            numero_rua.indexOf("2") > -1 ||
+            numero_rua.indexOf("3") > -1 ||
+            numero_rua.indexOf("4") > -1 ||
+            numero_rua.indexOf("5") > -1 ||
+            numero_rua.indexOf("6") > -1 ||
+            numero_rua.indexOf("7") > -1 ||
+            numero_rua.indexOf("8") > -1 ||
+            numero_rua.indexOf("9") > -1) {
+            div_numero_rua.innerHTML = ""
+        } else {
+            div_numero_rua.innerHTML = "* Insira valores válidos para este campo"
+        }
     }
 
     // email possuiir @
