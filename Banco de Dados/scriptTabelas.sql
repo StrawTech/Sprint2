@@ -5,11 +5,11 @@ use strawTech;
 
 create table empresa(
 	idEmpresa int primary key auto_increment,
-    nome varchar(40),
+    nome varchar(40) not null,
     representante varchar(50),
-    cnpj char(14),
-    email varchar(60),
-	senha varchar(30)
+    cnpj char(14) not null,
+    email varchar(60) not null,
+	senha varchar(30) not null
 );
 
 insert into empresa (nome, representante, cnpj, email, senha) values
@@ -17,20 +17,24 @@ insert into empresa (nome, representante, cnpj, email, senha) values
     ('Moranguinhos', 'Marcelo Augusto', '20943432843483', 'marcelo.morango@sptech.school', 'Morangu3t!'),
     ('Morantech', 'Pablo Santos', '91332372972472', 'pablo.santos@moran.tech', 'T3cnologi@');
     
-    select * from empresa;
+select * from empresa;
+
 
 create table endereco (
-	idEndereco int primary key auto_increment,
+	idEndereco int,
 	fkEmpresa int,
     foreign key (fkEmpresa) references empresa(idEmpresa),
-    cep char(8),
-    uf varchar(30),
-    cidade varchar(30),
+    cep char(8) not null,
+    uf varchar(30) not null,
+    cidade varchar(30) not null,
     bairro varchar(30),
-    rua varchar(40),
-    numero int
+    rua varchar(40) not null,
+    numero int,
+    primary key(idEndereco, fkEmpresa)
 );
- 
+
+insert into endereco values
+()
 
 
 create table plantacao (
