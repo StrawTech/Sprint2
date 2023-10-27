@@ -1,20 +1,34 @@
 .global-main{
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    /* align-items: center;
     width: 95%;
-   
     margin: auto;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 25px; */
 }
 
 .ImgMain{
-    width: 50%;
-    padding: 25px;
+    width: 80%;
 
 }
 
+.finalCard{
+    margin-bottom: 50px;
+}
+
+.TextHome{
+    text-align: center;
+    
+}
+
+.h3DentroMain{
+    text-align: center;
+    margin: auto;
+}
 /* 
 .bola1{
     width: 500px;
