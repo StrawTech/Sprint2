@@ -25,6 +25,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
 }
 
+.cardTempeHumIDeal{
+    margin: auto;
+    width: 65%;
+}
+
 /* .DivDashBoardCard-2{
     width: 99%;
     border: 1px solid Gray;
@@ -49,7 +54,7 @@
 
 .NumberCardMensalUmi{
     font-size: 20px;
-    background-color: #45b3e7;
+    background-color: #288f4a;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
@@ -57,7 +62,7 @@
 
 .NumberCardMensalTemp{
     font-size: 20px;
-    background-color: #FF7301;
+    background-color: #288f4a;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
