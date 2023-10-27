@@ -30,24 +30,26 @@
     <main>
 
         <div class="h1_main">
-            <h1>Entrar na conta</h1>
+            <h1>Acesse sua conta</h1>
             <p>Não possui uma conta? <a href="./Cadastro.html">Cadastre-se</a></p>
         </div>
 
         <div class="inputs_login">
 
             <p class="input_texto">Email</p>
-            <input class="input_decoracao" type="text">
+            <input id="input_TelaLogin_Email" class="input_decoracao" type="text">
+            <div  class ="mensagem_validacao" id="msgInputEmail"></div>
 
-            <p class="input_texto">CNPJ</p>
-            <input class="input_decoracao" type="text">
+            <!-- <p class="input_texto">CNPJ</p>
+            <input class="input_decoracao" type="text"> -->
 
             <p class="input_texto">Senha</p>
-            <input class="input_decoracao" type="text">
+            <input id="input_TelaLogin_Senha" class="input_decoracao" type="text">
+            <div class ="mensagem_validacao" id="msgInputSenha"></div>
 
         </div>
 
-        <button class="button_Login">Login</button>
+        <button onclick="Fazerlogin()" class="button_Login">Login</button>
 
 
     </main>
@@ -69,18 +71,36 @@
             <p class="labelSuporte">Qual o problema ?</p>
             <input class="input_decoracaoSuporte" type="text" id="input_problema">
 
-            <p class="labelSuporte">Descrição do problema</p>
+            <p class="labelSuporte">Descrição:</p>
             <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
 
-            <p class="labeSuportel">E-mail para contato</p>
+            <p class="labeSuportel">E-mail para contato:</p>
             <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="text">
 
             <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
 
         </div>
+        <br><br><br><br><br><br><br><br><br>
+        <div class="rodape2">
+            <br><br>
+            <div class="labelIcones">
+                <br>
+                <a href="https://wa.me/+5511947693677/? text=" target="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/strawtechsp" target="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png"
+                        alt=""></a>
+                <a href="https://github.com/StrawTech/Sprint2" target="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png"
+                        alt=""></a>
+                <br>
+                <h5>2023 StrawTech. Todos os direitos reservados</h5>
+            </div>
+            <br>
+        </div>
+
     </footer>
 
 </body>
 
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
+<script src="./scripts/scripitLogin.js"></script>

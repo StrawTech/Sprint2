@@ -42,26 +42,16 @@
             <div class="card_input1">
 
                 <div>
-                    <p class="input_texto">Representante</p>
-                    <input type="text" class="input_decoracao"><br>
-                </div>
-
-                <div class="espaçoRegister">
-                    <p class="input_texto">Email</p>
-                    <input type="text" class="input_decoracao"><br>
-                </div>
-
-            </div>
-            <div class="card_input1">
-
-                <div>
                     <p class="input_texto">Nome da Empresa</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_nome_empresa"><br>
+                    <div class="mensagem_validacao" id="div_nome_empresa"></div>
                 </div>
 
                 <div class="espaçoRegister">
-                    <p class="input_texto">Senha</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <p class="input_texto">Representante</p>
+                    <input type="text" class="input_decoracao" id="input_representante"><br>
+                    <div class="mensagem_validacao" id="div_representante"></div>
+
                 </div>
 
             </div>
@@ -69,17 +59,75 @@
 
                 <div>
                     <p class="input_texto">CNPJ</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_cnpj"><br>
+                    <div class="mensagem_validacao" id="div_cnpj"></div>
+
                 </div>
 
                 <div class="espaçoRegister">
                     <p class="input_texto">Endereço(CEP)</p>
-                    <input type="text" class="input_decoracao"><br>
+                    <input type="text" class="input_decoracao" id="input_endereco"><br>
+                    <div class="mensagem_validacao" id="div_endereco"></div>
+                </div>
+
+
+            </div>
+            <div class="card_input1">
+
+                <div>
+                    <p class="input_texto">Cidade</p>
+                    <input type="text" class="input_decoracao" id="input_cidade"><br>
+                    <div class="mensagem_validacao" id="div_cidade"></div>
+
+                </div>
+
+                <div class="espaçoRegister">
+                    <p class="input_texto">Bairro</p>
+                    <input type="text" class="input_decoracao" id="input_bairro"><br>
+                    <div class="mensagem_validacao" id="div_bairro"></div>
+                </div>
+
+
+            </div>
+            <div class="card_input1">
+
+                <div>
+                    <p class="input_texto">Nome da rua</p>
+                    <input type="text" class="input_decoracao" id="input_rua"><br>
+                    <div class="mensagem_validacao" id="div_rua"></div>
+
+                </div>
+
+                <div class="espaçoRegister">
+                    <p class="input_texto">Número</p>
+                    <input type="text" class="input_decoracao" id="input_numero_rua"><br>
+                    <div class="mensagem_validacao" id="div_numero_rua"></div>
+                </div>
+
+
+            </div>
+            <div class="card_input1">
+
+                <div>
+                    <p class="input_texto">E-mail</p>
+                    <input type="email" class="input_decoracao" id="input_email"><br>
+                    <div class="mensagem_validacao" id="div_email"></div>
+                </div>
+
+                <div class="espaçoRegister">
+                    <p class="input_texto">Senha</p>
+                    <input type="text" class="input_decoracao" id="input_senha"><br>
+                    <div class="mensagem_validacao" id="div_8caracter"></div>
+                    <div class="mensagem_validacao" id="div_especial"></div>
+                    <div class="mensagem_validacao" id="div_maiuscula"></div>
+                    <div class="mensagem_validacao" id="div_minuscula"></div>
+                    <div class="mensagem_validacao" id="div_numero"></div>
                 </div>
 
             </div>
 
-            <button class="button_cadastrar">Cadastrar</button>
+            <button onclick="cadastrar()" class="button_cadastrar">Cadastrar</button><br>
+
 
         </div>
 
@@ -106,18 +154,36 @@
             <p class="labelSuporte">Qual o problema ?</p>
             <input class="input_decoracaoSuporte" type="text" id="input_problema">
 
-            <p class="labelSuporte">Descrição do problema</p>
+            <p class="labelSuporte">Descrição:</p>
             <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
 
-            <p class="labeSuportel">E-mail para contato</p>
-            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="text">
+            <p class="labeSuportel">E-mail para contato:</p>
+            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="email">
 
             <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
 
         </div>
+
+        <div class="rodape2">
+            <br><br>
+            <div class="labelIcones">
+                <br>
+                <a href="https://wa.me/+5511947693677/? text=" target="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png"
+                        alt=""></a>
+                <a href="https://www.instagram.com/strawtechsp" target="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png"
+                        alt=""></a>
+                <a href="https://github.com/StrawTech/Sprint2" target="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png"
+                        alt=""></a>
+                <br>
+                <h5>2023 StrawTech. Todos os direitos reservados</h5>
+            </div>
+            <br>
+        </div>
+
     </footer>
 
 </body>
 
 </html>
 <script src="./scripts/scriptSuporte.js"></script>
+<script src="./scripts/Cadastro.js"></script>

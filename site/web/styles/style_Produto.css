@@ -1,0 +1,94 @@
+.apresentacao {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.img1 {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 550px;
+}
+
+.img2 {
+    margin-right: 40px;
+    width: 550px;
+    margin-top: 150px;
+    margin-bottom: 130px;
+}
+
+.txt1 {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: larger;
+}
+
+.txt2 {
+    margin-left: 100px;
+    margin-right: 170px;
+    margin-top: 220px;
+    text-align: left;
+    font-size: larger;
+}
+
+.txt3_titulo {
+    text-align: center;
+    margin-top: 25px;
+    
+}
+
+.txt3 {
+    text-align: center;
+    margin-left: 40px;
+    font-size: larger;
+    margin-bottom: 90px;
+}
+
+.info_produto {
+    display: flex;
+}
+
+.recursos {
+    display: flex;
+}
+
+.rodape2 {
+    background-color: #a0042b77;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+
+}
+
+.container_d {
+    margin-bottom: 60px;
+    font-size: larger;
+}
+.h2-titulos{
+    text-align: center;
+}
+.h2-vantagens{
+    text-align: center;
+    display: flex;
+    justify-content: center ;
+    margin-bottom: 10px;
+}
+
+
+
+span a {
+    text-decoration: none;    
+    color: red;
+}

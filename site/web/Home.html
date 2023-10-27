@@ -2,86 +2,116 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="icon" href="./assets/logoIcon.png" />
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/style_Home.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" href="./assets/logoIcon.png" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/style_Home.css" />
 </head>
 
 <body>
+  <header>
+    <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech" />
 
-    <header>
-        <img src="./assets/logo.jpeg" width="135px" alt="Logo StrawTech">
+    <ul>
+      <li class="headerLi"><a href="./Home.html">Home</a></li>
+      <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
+      <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
+      <li class="headerLi"><a href="./Produto.html">Produto</a></li>
+    </ul>
+    <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
+  </header>
 
-        <ul>
-            <li class="headerLi"><a href="./Home.html">Home</a></li>
-            <li class="headerLi"><a href="./Gráfico.html">Gráficos</a></li>
-            <li class="headerLi"><a href="./Calculadora.html">Calculadora</a></li>
-            <li class="headerLi"><a href="./Produto.html">Produto</a></li>
-        </ul>
-        <h3 class="h3Header"><a href="./Login.html">Login</a></h3>
+  <main>
+    <div class="global-main finalCard">
+      <div class="ImgMain">
+        <img style="border-radius: 25px;width: 500px;" src="./assets/estufaMorangoimg.jpg" alt="">
+      </div>
+      <div class="TextHome">
+        <h2><b>Sobre a empresa</b></h2><br><br>
+        <h3 class="h3DentroMain">A StrawTech foi fundada no início de 2023 como resultado de um projeto acadêmico
+          liderado por estudantes da
+          SP Tech. Identificamos um déficit significativo na gestão de temperatura e umidade no setor agrícola de
+          morangos. Após uma extensa pesquisa de mercado, ligações e análises aprofundadas, conseguimos desenvolver um
+          sistema de automação para controlar esses fatores e, assim, reduzir os danos nesse segmento.
 
-    </header>
+        </h3>
+      </div>
+    </div>
+    <div>
+    </div>
 
-    <main>
-        <div class="global-main">
-            <div>
-                <img class="Imagem" src="./assets/imagem da tela home.png" alt="">
-            </div>
+    <div class="global-main finalCard">
+      <div class="TextHome">
+        <h2><b>Mas, afinal, qual é a nossa missão?</b></h2><br><br>
+        <h3 class="h3DentroMain">A StrawTech se dedica à implantação de sensores em estufas tipo túnel baixo,
+          especialmente projetadas para o cultivo de morangos. Além disso, oferecemos um abrangente software de
+          monitoramento de temperatura e umidade, bem como suporte integral ao cliente.
+        </h3>
+      </div>
+      <div class="ImgMain">
+        <img style="border-radius: 25px;width: 500px;" src="./assets/estufa-de-morangos.jpg" alt="">
+      </div>
+    </div>
+    <div>
+    </div>
 
-            <div class="Text">
-
-                <h3>A estratégia da StrawTech consiste em monitorar a temperatura e umidade da plantação de morango.
-                </h3>
-                <p>Com nossa aplicação estimamos um aumento na produtividade constante o ano inteiro de 15% a 27%.</p>
-
-            </div>
-
-        </div>
-    </main>
-
-    <!-- <div class="bola1"></div> -->
-
-    <footer>
-        <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
-            <img src="./assets/suporte-tecnico.png" alt="">
-        </div>
+    <div class="global-main finalCard">
+      <div class="ImgMain">
+        <img style="border-radius: 25px;width: 500px;" src="./assets/FotoMorangos.jpg" alt="">
+      </div>
+      <div class="TextHome">
+        <h2><b>Nosso produto</b></h2><br><br>
+        <h3 class="h3DentroMain ">O cliente possui acesso direto a um software de monitoramento de umidade por
+          meio de um
+          site institucional, onde ele terá acesso a dashboard, aos alertas e contato direto com o suporte. </h3>
+      </div>
+    </div>
+    <div>
+    </div>
 
 
+  </main>
 
-        <div id="containerSuporte" class="containerSuporte">
-            <div class="HeaderSuporte">
+  <footer>
+    <div onclick="OpenSuporte()" id="idimgOpen" class="ImgOpenSuporte">
+      <img src="./assets/suporte-tecnico.png" alt="" />
+    </div>
 
-                <h1 class="tituloSuporte">Suporte</h1>
-                <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
-            </div>
+    <div id="containerSuporte" class="containerSuporte">
+      <div class="HeaderSuporte">
+        <h1 class="tituloSuporte">Suporte</h1>
+        <h1 onclick="ClosedSuporte()" class="CloseSuporte">X</h1>
+      </div>
 
-            <p class="labelSuporte">Qual o problema ?</p>
-            <input class="input_decoracaoSuporte" type="text" id="input_problema">
+      <p class="labelSuporte">Qual o problema ?</p>
+      <input class="input_decoracaoSuporte" type="text" id="input_problema" />
 
-            <p class="labelSuporte">Descrição do problema</p>
-            <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
+      <p class="labelSuporte">Descrição:</p>
+      <textarea id="DescricaoDoPloblema" class="input_decoracaoSuporte" type="text"></textarea>
 
-            <p class="labeSuportel">E-mail para contato</p>
-            <input id="EmailParaContato" type="email" class="input_decoracaoSuporte " type="text">
+      <p class="labeSuportel">E-mail para contato:</p>
+      <input id="EmailParaContato" type="email" class="input_decoracaoSuporte" type="email" />
 
-            <button class="buttonSuporte" onclick="enviarMsgSuporte()">Enviar</button>
+      <button class="buttonSuporte" onclick="enviarMsgSuporte()">
+        Enviar
+      </button>
+    </div>
 
-        </div>
-
-        <div class="rodape">
-            <img style= "height: 40px; width: 40px;"src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="">
-            <img style= "height: 40px; width: 40px;"src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="">
-            <img style= "height: 40px; width: 40px;"src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="">
-            <br><br>
-        2023 StrawTech. Todos os direitos reservados
-        </div>
-        
-    </footer>
-
+    <div class="rodape2">
+      <br /><br />
+      <div class="labelIcones">
+        <br>
+        <a href="https://wa.me/+5511947693677/? text="> <img class="icones" src="./assets/whatsapp.png" alt=""></a>
+        <a href="https://www.instagram.com/strawtechsp"> <img class="icones" src="./assets/instagram.png" alt=""></a>
+        <a href="https://github.com/StrawTech/Sprint2"> <img class="icones" src="./assets/github.png" alt=""></a>
+        <br />
+        <h5>2023 StrawTech. Todos os direitos reservados</h5>
+      </div>
+      <br />
+    </div>
+  </footer>
 </body>
 
 </html>

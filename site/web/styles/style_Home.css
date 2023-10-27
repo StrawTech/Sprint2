@@ -1,19 +1,36 @@
-
 .global-main{
     display: flex;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    /* align-items: center;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px; */
+}
+
+.ImgMain{
+    width: 80%;
+
+}
+
+.finalCard{
+    margin-bottom: 50px;
+}
+
+.TextHome{
+    text-align: center;
     
 }
 
-.Text{
-width: 49%;
-margin-left: 75px;
+.h3DentroMain{
+    text-align: center;
+    margin: auto;
 }
-
-.Imagem{
-    width: 650px;
-    height: 490px;
-}
-/* .bola1{
+/* 
+.bola1{
     width: 500px;
     height: 600px;
     background-color: rgba(244, 199, 204, 0.986);

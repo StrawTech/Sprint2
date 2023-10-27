@@ -1,0 +1,11 @@
+Sobre a empresa
+
+	A StrawTech foi fundada no início de 2023 como resultado de um projeto acadêmico liderado por estudantes da SP Tech. Identificamos um déficit significativo na gestão de temperatura e umidade no setor agrícola de morangos. Após uma extensa pesquisa de mercado, ligações e análises aprofundadas, conseguimos desenvolver um sistema de automação para controlar esses fatores e, assim, reduzir os danos nesse segmento.
+
+Mas, afinal, qual é a nossa missão?
+	
+	A StrawTech se dedica à implantação de sensores em estufas tipo túnel baixo, especialmente projetadas para o cultivo de morangos. Além disso, oferecemos um abrangente software de monitoramento de temperatura e umidade, bem como suporte integral ao cliente.
+
+Nosso produto
+
+	O cliente possui acesso direto a um software de monitoramento de umidade por meio de um site institucional, onde ele terá acesso a dashboard, aos alertas e contato direto com o suporte.

@@ -7,7 +7,7 @@
 
 .h1_main h1{
     margin-top: 25px;
-    font-size:65px;
+    font-size:53px;
     color: #9E3750;
 
 }
@@ -40,4 +40,10 @@ margin-top: 50px;
 
 .button_Login:hover{
     background-color: #9E3750;
+}
+
+.mensagem_validacao{
+    font-size: 15px;
+    color: red;
+    padding-left: 8px;
 }

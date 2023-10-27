@@ -19,7 +19,7 @@ const serial = async (
             port: 3306,
             user: 'aluno',
             password: 'sptech',
-            database: 'metricas'
+            database: 'strawTech'
         }
     ).promise();
 
@@ -42,7 +42,7 @@ const serial = async (
         const dht11Umidade = parseFloat(valores[0]);
         // const dht11Temperatura = parseFloat(valores[1]);
         // const luminosidade = parseFloat(valores[2]);
-        const lm35Temperatura = parseFloat(valores[3]);
+        const lm35Temperatura = parseFloat(valores[1]);
         // const chave = parseInt(valores[4]);
 
         valoresDht11Umidade.push(dht11Umidade);
@@ -53,7 +53,7 @@ const serial = async (
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
-                'INSERT INTO sensores (dht11_umidade, lm35_temperatura) VALUES (?, ?)',
+                'INSERT INTO registro (dht11_umidade, lm35_temperatura) VALUES (?, ?)',
                 [dht11Umidade, lm35Temperatura]
             );
         }

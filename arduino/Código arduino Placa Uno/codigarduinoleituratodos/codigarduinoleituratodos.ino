@@ -46,5 +46,5 @@ Serial.println(";");
 //}
 //Serial.println();
 
-delay(200);
+delay(10000);
 }
