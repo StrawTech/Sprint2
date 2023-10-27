@@ -20,35 +20,39 @@ insert into empresa (nome, representante, cnpj, email, senha) values
 select * from empresa;
 
 
-create table endereco (
-	idEndereco int,
+create table plantacao (
+	idPlantacao int,
 	fkEmpresa int,
-    foreign key (fkEmpresa) references empresa(idEmpresa),
+	foreign key (fkEmpresa) references empresa(idEmpresa),
+    nome varchar(20),
+    qtdArduino int,
+    primary key (idPlantacao, fkEmpresa)
+    );
+    
+insert into plantacao values
+	(1, 1, 'Estufa baixa SP', 3),
+	(2, 1, 'Estufa SC', 3),
+	(3, 2, 'Morango maduro', 3),
+	(4, 3, 'Morago pequeno', 3);
+
+create table endereco (
+	idEndereco int primary key auto_increment,
+	fkPlantacao int,
+    foreign key (fkPlantacao) references plantacao(idPlantacao),
     cep char(8) not null,
     uf varchar(30) not null,
     cidade varchar(30) not null,
     bairro varchar(30),
     rua varchar(50) not null,
-    numero int,
-    primary key(idEndereco, fkEmpresa)
+    numero int
 );
 
 insert into endereco values
-	(1,1, '21304932', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Hadock Lobo', 595),
-	(2,1, '89320492', 'RJ', 'Rio de Janeiro', 'Madureira','Avenida Brasil', 1000),
-	(1,2, '64154647', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Alameda Santos', 3445),
-	(1,3, '54646819', 'SC', 'Santa Catarina', 'Joinville', 'Pitangas', 34);
+	(null, 1, '21304932', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Hadock Lobo', 595),
+	(null, 2, '89320492', 'RJ', 'Rio de Janeiro', 'Madureira','Avenida Brasil', 1000),
+	(null, 3, '64154647', 'SP', 'Sao Paulo', 'Cerqueira Cesar','Alameda Santos', 3445),
+	(null, 4, '54646819', 'SC', 'Santa Catarina', 'Joinville', 'Pitangas', 34);
 
-
-
-
-create table plantacao (
-	idPlantacao int primary key auto_increment,
-	fkEmpresa int,
-    nome varchar(20),
-    qtdArduino int,
-    foreign key (fkEmpresa) references empresa(idEmpresa)
-    );
 
 create table arduino (
 	idArduino int primary key auto_increment,
