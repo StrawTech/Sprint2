@@ -8,10 +8,16 @@ create table empresa(
     nome varchar(40),
     representante varchar(50),
     cnpj char(14),
-    email varchar(45),
+    email varchar(60),
 	senha varchar(30)
 );
 
+insert into empresa (nome, representante, cnpj, email, senha) values
+	('Frizza Estufas', 'Fernando Souza', '29410462723323', 'estufa.frizzarini@sptech.school', 'Estuf@2023' ),
+    ('Moranguinhos', 'Marcelo Augusto', '20943432843483', 'marcelo.morango@sptech.school', 'Morangu3t!'),
+    ('Morantech', 'Pablo Santos', '91332372972472', 'pablo.santos@moran.tech', 'T3cnologi@');
+    
+    select * from empresa;
 
 create table endereco (
 	idEndereco int primary key auto_increment,
